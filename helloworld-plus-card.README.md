@@ -1,3 +1,5 @@
+# INFORMATIONS
+
 ## The Code
 
 Find the code in the file named `card.js` alongside with this README.

@@ -30,5 +30,5 @@ class HelloWorldCard extends HTMLElement {
     }
 }
 
-customElements.define('hello-world-card', HelloWorldCard);
+customElements.define('helloworld-card', HelloWorldCard);
 
