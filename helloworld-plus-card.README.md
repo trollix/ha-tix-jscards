@@ -64,3 +64,4 @@ The type has to match the name of the custom element you did set. Remember?
 ```js
 customElements.define('hello-world-card', HelloWorldCard);
 ```
+
