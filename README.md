@@ -154,3 +154,34 @@ The type has to match the name of the custom element you did set. Remember?
 ```js
 customElements.define('hello-world-card', HelloWorldCard);
 ```
+
+![visual selection](img/img2.png)
+
+#### A note aside
+
+If you are a little experienced, you will wounder, that there is no interface to
+register the card and that the internal implementation of the registry gets
+exposed. You even have to care to create the list, if it does not already exist.
+
+That's a decision made by the developers. A likely reason is, that all
+dependencies shall be avoided to give you the full freedom to choose your own
+tools. You may consider to pack the lines after the body of the class into a
+function with suitable parameters, that you can reuse for all your cards.
+
+### Summary
+
+Let's wrap up the ***Hello World*** tutorials. There are two main points to
+mention on the level of architecture.
+
+First, the card is a [***custom
+element***](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
+The class inherits  a lot of methods from `HTMLElement` or any equivalent parent
+class. Often you will find cards, that inherit from [`LitElement`](https://lit.dev).
+
+Second, there is an interface to the ***Home Assistant Frontend***. Some methods
+are required, others are optional. There is no full specification yet. In doubt
+the source is the authority.
+
+You did learn, how to throw errors to help the user with the setup of the card.
+In addition you can provide a default configuration. Finally you did learn, how
+to register the card for the visual card selection.
