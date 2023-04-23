@@ -66,7 +66,29 @@ this.content.innerHTML = `
 Only the dynamic node is updated upon each call to minimize changes of the DOM
 tree.
 
+### Using the Card
 
+Go to a dashboard. Use the three dots in the upper right hand corner to edit the
+dashboard. Take control if required. Click ***+ ADD CARD***. At the bottom
+select ***Manual*** to add a custom card.
+
+![card configuration](img/img1.png)
+
+In the card configuration enter:
+
+```yaml
+type: 'custom:hello-world-card'
+entity: sun.sun
+```
+
+Don't forget the `custom` prefix, as you add a custom card. The type of the card
+is the type you did register in the last line of the `card.js` file:
+
+```js
+customElements.define('hello-world-card', HelloWorldCard);
+```
+
+If everything went well so far, congratulations! You should now see the output of the first card you created yourself. Try different entities.
 
 ## Hello World plus
 
@@ -132,4 +154,3 @@ The type has to match the name of the custom element you did set. Remember?
 ```js
 customElements.define('hello-world-card', HelloWorldCard);
 ```
-
